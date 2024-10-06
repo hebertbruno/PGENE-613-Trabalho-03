@@ -8,9 +8,9 @@ Este projeto tem como objetivo identificar atividades físicas a partir de sinai
 2. Levantar-se da cama – `StandingUpFL`
 3. Caminhar – `Walking`
 4. Correr – `Running`
-5. Descer escadas – `GoingDownS`
+5. Subir escadas – `GoingUpS`
 6. Pular – `Jumping`
-7. Subir escadas – `GoingUpS`
+7. Descer escadas – `GoingDownS`
 8. Deitar-se na cama – `LyingDownFS`
 9. Sentar-se numa cadeira – `SittingDown`
 
