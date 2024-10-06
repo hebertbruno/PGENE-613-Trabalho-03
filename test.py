@@ -1,7 +1,9 @@
 import numpy as np
 from sklearn.metrics import confusion_matrix
+from tensorflow.keras.models import load_model
 
-def evaluate_model(model, X_val, y_val):
+def evaluate_model(model_path, X_val, y_val):
+    model = load_model(model_path)
     # Avaliar o modelo no conjunto de validação
     val_loss, val_accuracy = model.evaluate(X_val, y_val)
     print(f'Acurácia no conjunto de validação: {val_accuracy * 100:.2f}%')

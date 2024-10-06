@@ -1,25 +1,29 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_training_curves(history):
-    # Plotar acurácia e perda
-    plt.figure(figsize=(12, 4))
-    plt.subplot(1, 2, 1)
+def plot_accuracy(history):
+    # Plotar acurácia
+
+    plt.figure(figsize=(10, 6))
     plt.plot(history.history['accuracy'], label='Acurácia Treinamento')
     plt.plot(history.history['val_accuracy'], label='Acurácia Validação')
     plt.title('Acurácia ao longo do treinamento')
     plt.xlabel('Épocas')
     plt.ylabel('Acurácia')
     plt.legend()
+    plt.savefig(f'results/accuracy.png')
+    plt.close()
 
-    plt.subplot(1, 2, 2)
+def plot_loss(history):
+    #plotaar perda
+    plt.figure(figsize=(10, 6))
     plt.plot(history.history['loss'], label='Perda Treinamento')
     plt.plot(history.history['val_loss'], label='Perda Validação')
     plt.title('Perda ao longo do treinamento')
     plt.xlabel('Épocas')
     plt.ylabel('Perda')
     plt.legend()
-    plt.savefig(f'results/accuracy_loss.png')
+    plt.savefig(f'results/loss.png')
     plt.close()
     #plt.show()
 

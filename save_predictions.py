@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
+from tensorflow.keras.models import load_model
 
-def save_predictions_to_csv(model, X_val, y_val, activity_mapping, filename='predictions.csv'):
+def save_predictions_to_csv(model_path, X_val, y_val, activity_mapping, filename='predictions.csv'):
     # Fazer previsões no conjunto de validação
+    model = load_model(model_path)
     predictions = model.predict(X_val)
 
     # Pegar as classes preditas (a classe com maior probabilidade)
